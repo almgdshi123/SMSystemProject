@@ -1,0 +1,117 @@
+﻿<Project Sdk="Microsoft.NET.Sdk.WindowsDesktop">
+
+  <PropertyGroup>
+    <OutputType>WinExe</OutputType>
+    <TargetFramework>netcoreapp3.1</TargetFramework>
+    <UseWindowsForms>true</UseWindowsForms>
+    <ApplicationIcon>2022-09-08_123734.ico</ApplicationIcon>
+    <Win32Resource />
+    <Authors>المقدشي عبدالمغني</Authors>
+    <Company>UniSoft Team</Company>
+    <Product>مخزن</Product>
+    <Description>
+		برنامج مخزن اداة بسيطة لادارة المخازن
+		تم تطوير البرنامج اعتمادا على اليه العمل ضمن المؤسسات
+		UniSoft Team تم التطوير من قبل
+		وجميع الحقوق محفوظة وللتواصل على 774749697</Description>
+    <Copyright>UniSoft Team</Copyright>
+  </PropertyGroup>
+
+  <ItemGroup>
+    <PackageReference Include="ClosedXML" Version="0.96.0" />
+    <PackageReference Include="FastMember" Version="1.5.0" />
+    <PackageReference Include="Microsoft.EntityFrameworkCore.Design" Version="5.0.17">
+      <PrivateAssets>all</PrivateAssets>
+      <IncludeAssets>runtime; build; native; contentfiles; analyzers; buildtransitive</IncludeAssets>
+    </PackageReference>
+    <PackageReference Include="Microsoft.EntityFrameworkCore.Tools" Version="5.0.17">
+      <PrivateAssets>all</PrivateAssets>
+      <IncludeAssets>runtime; build; native; contentfiles; analyzers; buildtransitive</IncludeAssets>
+    </PackageReference>
+  </ItemGroup>
+
+  <ItemGroup>
+    <ProjectReference Include="..\SMSystem.Core\SMSystem.Core.csproj" />
+    <ProjectReference Include="..\SMSystem.Data\SMSystem.Data.csproj" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <Compile Update="Gui\CustomersGui\AddCustomerConscienceCard.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Update="Gui\CustomersGui\CustomerConscienceCardUserForm.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Update="Gui\OutOfConscince\OutOfConscenseAddForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Update="Gui\OutOfConscince\OutOfConscenseUserControl.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Update="Gui\DamageGui\DamageUserControl.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Update="Gui\DamageGui\DamageAddForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Update="Gui\IncomeGui\IncomeAddForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Update="Gui\IncomeGui\IncomeUserControl.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Update="Gui\OutComeGui\OutComeAddForm.cs" />
+    <Compile Update="Gui\OutComeGui\OutComeUserControl.cs" />
+    <Compile Update="Gui\SuppliersGui\SupplierAddForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Update="Gui\SuppliersGui\SupplierUserControl.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Update="Gui\MaterailsGui\MaterailsUserControl.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Update="Gui\MaterailsGui\MaterailsAddForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Update="Gui\OtherGui\NotifictionUser.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Update="Gui\CustomersGui\CustomerAddForm.cs" />
+    <Compile Update="Gui\CustomersGui\CustomerUserControl.cs" />
+    <Compile Update="Gui\UserGui\UserLogin.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Update="Gui\UserGui\UserAddForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Update="Gui\UserGui\UserUserControl.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Update="Properties\Resources.Designer.cs">
+      <DesignTime>True</DesignTime>
+      <AutoGen>True</AutoGen>
+      <DependentUpon>Resources.resx</DependentUpon>
+    </Compile>
+    <Compile Update="Properties\Settings.Designer.cs">
+      <DesignTimeSharedInput>True</DesignTimeSharedInput>
+      <AutoGen>True</AutoGen>
+      <DependentUpon>Settings.settings</DependentUpon>
+    </Compile>
+  </ItemGroup>
+
+  <ItemGroup>
+    <EmbeddedResource Update="Properties\Resources.resx">
+      <Generator>ResXFileCodeGenerator</Generator>
+      <LastGenOutput>Resources.Designer.cs</LastGenOutput>
+    </EmbeddedResource>
+  </ItemGroup>
+
+  <ItemGroup>
+    <None Update="Properties\Settings.settings">
+      <Generator>SettingsSingleFileGenerator</Generator>
+      <LastGenOutput>Settings.Designer.cs</LastGenOutput>
+    </None>
+  </ItemGroup>
+
+</Project>
